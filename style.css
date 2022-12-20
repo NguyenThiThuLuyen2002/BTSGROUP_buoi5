@@ -1,0 +1,97 @@
+body {
+    box-sizing: border-box;
+    margin: 0px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.effect-marley img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.8;
+}
+.effect-marley {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 320px;
+    max-width: 480px;
+    max-height: 360px;
+    width: 48%;
+    background: #3085a3;
+    text-align: center;
+    cursor: pointer;
+}
+.effect-marley.caption span {
+    font-weight:bolder;
+}
+.caption {
+    position: absolute;
+    text-align: right;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-transform: uppercase;
+
+}
+
+div.caption h2,
+div.caption p {
+	position: absolute;
+	right: 30px;
+	left: 30px;
+	padding: 10px 0;
+}
+
+
+div.effect-marley p {
+	bottom: 30px;
+	line-height: 1.5;
+	transform: translate3d(0,100%,0);
+}
+
+div.effect-marley h2 {
+	top: 30px;
+	transition: transform 0.35s;	
+	transform: translate(0,20px);
+}
+
+div.effect-marley:hover h2 {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+div.effect-marley h2::after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background: #fff;
+	content: '';
+	transform: translate(0,40px);
+}
+
+div.effect-marley h2::after,
+div.effect-marley p {
+	opacity: 0;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+div.effect-marley:hover h2::after,
+div.effect-marley:hover p {
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+
+
+
